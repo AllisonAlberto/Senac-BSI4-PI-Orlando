@@ -3,13 +3,14 @@ package br.senac.pi.orlando;
 public class Avaliacao{
 	
 	private long id;
-	//private Usuario usuario;
-	private String categoria;
+	private Usuario usuario;
+	private Categoria categoria;
 	private String titulo;
 	private String comentario;
 	private int nota;
-	private float preco;
-	//Data
+	private int duracao;
+	private float valor;
+	private String dataAtividade;
 	
 	public long getId() {
 		return id;
@@ -17,10 +18,16 @@ public class Avaliacao{
 	public void setId(long id) {
 		this.id = id;
 	}
-	public String getCategoria() {
+	public Usuario getUsuario() {
+		return usuario;
+	}
+	public void setUsuario(Usuario usuario) {
+		this.usuario = usuario;
+	}
+	public Categoria getCategoria() {
 		return categoria;
 	}
-	public void setCategoria(String categoria) {
+	public void setCategoria(Categoria categoria) {
 		this.categoria = categoria;
 	}
 	public String getTitulo() {
@@ -41,11 +48,23 @@ public class Avaliacao{
 	public void setNota(int nota) {
 		this.nota = nota;
 	}
-	public float getPreco() {
-		return preco;
+	public int getDuracao() {
+		return duracao;
 	}
-	public void setPreco(float preco) {
-		this.preco = preco;
+	public void setDuracao(int duracao) {
+		this.duracao = duracao;
+	}
+	public float getValor() {
+		return valor;
+	}
+	public void setValor(float valor) {
+		this.valor = valor;
+	}
+	public String getDataAtividade() {
+		return dataAtividade;
+	}
+	public void setDataAtividade(String dataAtividade) {
+		this.dataAtividade = dataAtividade;
 	}
 
 }

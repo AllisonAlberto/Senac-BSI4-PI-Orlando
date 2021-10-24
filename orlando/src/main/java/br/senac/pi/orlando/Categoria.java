@@ -3,12 +3,8 @@ package br.senac.pi.orlando;
 public class Categoria {
 	
 	private long id;
-	private String filme;
-	private String serie;
-	private String jogo;
-	private String livro;
-	private String restaurante;
-	private String outros;
+	private String tipo;
+	private String descricao;
 	
 	public long getId() {
 		return id;
@@ -16,41 +12,18 @@ public class Categoria {
 	public void setId(long id) {
 		this.id = id;
 	}
-	public String getFilme() {
-		return filme;
+	public String getTipo() {
+		return tipo;
 	}
-	public void setFilme(String filme) {
-		this.filme = filme;
+	public void setTipo(String tipo) {
+		this.tipo = tipo;
 	}
-	public String getSerie() {
-		return serie;
+	public String getDescricao() {
+		return descricao;
 	}
-	public void setSerie(String serie) {
-		this.serie = serie;
+	public void setDescricao(String descricao) {
+		this.descricao = descricao;
 	}
-	public String getJogo() {
-		return jogo;
-	}
-	public void setJogo(String jogo) {
-		this.jogo = jogo;
-	}
-	public String getLivro() {
-		return livro;
-	}
-	public void setLivro(String livro) {
-		this.livro = livro;
-	}
-	public String getRestaurante() {
-		return restaurante;
-	}
-	public void setRestaurante(String restaurante) {
-		this.restaurante = restaurante;
-	}
-	public String getOutros() {
-		return outros;
-	}
-	public void setOutros(String outros) {
-		this.outros = outros;
-	}
+	
 
 }

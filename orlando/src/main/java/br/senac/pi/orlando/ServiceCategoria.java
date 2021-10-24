@@ -1,6 +1,5 @@
 package br.senac.pi.orlando;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import jakarta.ws.rs.Consumes;
@@ -12,54 +11,75 @@ import jakarta.ws.rs.Path;
 import jakarta.ws.rs.QueryParam;
 import jakarta.ws.rs.core.MediaType;
 
-@Path("Categoria")
+@Path("categoria")
 public class ServiceCategoria {
-	private static List<Categoria> Lista = new ArrayList<Categoria>();
-
+	
 	@GET
-	public List<Categoria> getAll() {
-		return Lista;
+	public List<Categoria> listar() {
+		try {
+			return DaoCategoria.listar();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		return null;
 	}
-
+	
+	
+	@GET
+	@Consumes(MediaType.APPLICATION_JSON)
+	@Path("tipo")
+	public List<Categoria> buscarByTipo(@QueryParam("tipo") String tipo) {
+		try {
+			return DaoCategoria.buscarByTipo(tipo);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		return null;
+		
+	}
+	
+	@GET
+	@Consumes(MediaType.APPLICATION_JSON)
+	@Path("id")
+	public List<Categoria> buscarById(@QueryParam("id") long id) {
+		try {
+			return DaoCategoria.buscarById(id);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return null;
+	}
+	
 	@POST
 	@Consumes(MediaType.APPLICATION_JSON)
 	public void inserir(Categoria categoria) {
-		Lista.add(categoria);
+		try {
+			DaoCategoria.inserir(categoria);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 
 	@PUT
 	@Consumes(MediaType.APPLICATION_JSON)
 	public void atualizar(Categoria categoria) {
-		for (int i = 0; i < Lista.size(); i++) {
-			Categoria AvaBusca = Lista.get(i);
-			if (AvaBusca.getId() == categoria.getId()) {
-				AvaBusca.setFilme(categoria.getFilme());
-				AvaBusca.setSerie(categoria.getSerie());
-				AvaBusca.setJogo(categoria.getJogo());
-				AvaBusca.setLivro(categoria.getLivro());
-				AvaBusca.setRestaurante(categoria.getRestaurante());
-				AvaBusca.setOutros(categoria.getOutros());
-				break;
-			}
+		try {
+			DaoCategoria.atualizar(categoria);
+		} catch (Exception e) {
+			e.printStackTrace();
 		}
 	}
 	
 	@DELETE	
 	@Consumes(MediaType.APPLICATION_JSON)
-	public void excluir(@QueryParam("id") int id) {
-		int pos = -1;
-		for (int i = 0; i <Lista.size(); i++) {
-			Categoria categoria = Lista.get(i);
-			if(categoria.getId() == id) {
-				pos = i;
-				break;
-			}
+	public void excluir(@QueryParam("id") long id) {
+		try {
+			DaoCategoria.excluir(id);
+		} catch (Exception e) {
+			e.printStackTrace();
 		}
-	
-		if (pos >= 0) {
-			Lista.remove(pos);
-		}
-		
 	}
 
 }

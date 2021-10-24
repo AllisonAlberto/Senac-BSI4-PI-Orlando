@@ -1,12 +1,12 @@
 package br.senac.pi.orlando;
 
-public class Usuario {
+public class Cliente {
 	
 	private long id;
 	private String nome;
 	private String usuario;
 	private String senha;
-	private String dtNascimento;
+	private String cnpj;
 	
 	public long getId() {
 		return id;
@@ -32,11 +32,11 @@ public class Usuario {
 	public void setSenha(String senha) {
 		this.senha = senha;
 	}
-	public String getDtNascimento() {
-		return dtNascimento;
+	public String getCnpj() {
+		return cnpj;
 	}
-	public void setDtNascimento(String dtNascimento) {
-		this.dtNascimento = dtNascimento;
+	public void setCnpj(String cnpj) {
+		this.cnpj = cnpj;
 	}
 	
 }

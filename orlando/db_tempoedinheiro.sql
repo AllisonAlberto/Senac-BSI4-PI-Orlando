@@ -32,7 +32,7 @@ CREATE TABLE tb_avaliacao (
 	usuario_id bigint NOT NULL,
 	categoria_id bigint NOT NULL,
 	titulo varchar(100) NOT NULL,
-	comentario varchar(100),
+	comentario varchar(255),
 	nota int NOT NULL,
 	duracao int NOT NULL,
 	valor DECIMAL NOT NULL,

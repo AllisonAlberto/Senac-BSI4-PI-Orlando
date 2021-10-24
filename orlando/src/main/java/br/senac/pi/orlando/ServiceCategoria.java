@@ -25,7 +25,6 @@ public class ServiceCategoria {
 		return null;
 	}
 	
-	
 	@GET
 	@Consumes(MediaType.APPLICATION_JSON)
 	@Path("tipo")

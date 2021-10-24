@@ -27,6 +27,18 @@ public class ServiceAvaliacao {
 		
 	}
 	
+	@GET
+	@Consumes(MediaType.APPLICATION_JSON)
+	@Path("id")
+	public List<Avaliacao> buscarById(@QueryParam("id") long id) {
+		try {
+			return DaoAvaliacao.buscarById(id);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return null;
+	}
+	
 	@POST
 	@Consumes(MediaType.APPLICATION_JSON)
 	public void inserir(Avaliacao avaliacao) {
@@ -36,4 +48,25 @@ public class ServiceAvaliacao {
 			e.printStackTrace();
 		}
 	}
+	
+	@PUT
+	@Consumes(MediaType.APPLICATION_JSON)
+	public void atualizar(Avaliacao avaliacao) {
+		try {
+			DaoAvaliacao.atualizar(avaliacao);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+	@DELETE	
+	@Consumes(MediaType.APPLICATION_JSON)
+	public void excluir(@QueryParam("id") long id) {
+		try {
+			DaoAvaliacao.excluir(id);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
 }

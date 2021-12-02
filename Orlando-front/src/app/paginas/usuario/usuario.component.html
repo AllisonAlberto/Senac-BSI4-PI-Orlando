@@ -1,0 +1,33 @@
+<div>
+    <h2>Lista de Usurarios</h2>
+
+    <ul>
+        <li (click)="novoUsuario()">
+            Novo Usuarios
+        </li>
+    </ul>
+
+    <div *ngIf="usuarioEdicao != undefined">
+        <h3>Inserir/Editar</h3>
+        <input placeholder="Nome" [(ngModel)]="usuarioEdicao.nome"> <br>
+        <input placeholder="Usuario" [(ngModel)]="usuarioEdicao.usuario"> <br>
+        <input placeholder="Senha" [(ngModel)]="usuarioEdicao.senha"> <br>
+        <input placeholder="dtNascimento" [(ngModel)]="usuarioEdicao.dtNascimento"> <br>
+        <Button (click)="cancelar()">Cancelar</Button>
+        <Button (click)="salvar()">Salvar</Button>
+    </div>
+
+    <ul>
+        <li *ngFor="let usuario of usuarios">
+        <span (click)="selecionarUsuario(usuario)">
+            {{usuario.id}}
+            {{usuario.nome}}
+            {{usuario.usuario}}
+            {{usuario.senha}}
+            {{usuario.dtNascimento}}
+        </span>
+        <span (click)="excluir(usuario)" classe="botao-excluir">Clique p/ Excluir</span>
+        </li>
+    </ul>
+
+</div>

@@ -1,0 +1,835 @@
+{
+	"info": {
+		"_postman_id": "6d60d120-c4ab-43b2-a559-cbec6670e348",
+		"name": "SENACSP",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "PI - Tempo é dinheiro",
+			"item": [
+				{
+					"name": "Usuario",
+					"item": [
+						{
+							"name": "GETAll - Usuario",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/orlando/webapi/usuario",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"orlando",
+										"webapi",
+										"usuario"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GETByNome - Usuario",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/orlando/webapi/usuario/nome?nome=%%",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"orlando",
+										"webapi",
+										"usuario",
+										"nome"
+									],
+									"query": [
+										{
+											"key": "nome",
+											"value": "%%"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GETById - Usuario",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/orlando/webapi/usuario/id?id=",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"orlando",
+										"webapi",
+										"usuario",
+										"id"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "POST - Usuario",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"nome\": \"Allison Alberto\",\r\n    \"usuario\": \"allison@email.com\",\r\n    \"senha\": \"senha123\",\r\n    \"dtNascimento\": \"25-10-1994\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/orlando/webapi/usuario",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"orlando",
+										"webapi",
+										"usuario"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "PUT - Usuario",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 3,\r\n    \"nome\": \"Beatriz Rocha\",\r\n    \"usuario\": \"bia@email.com\",\r\n    \"senha\": \"SENHA987\",\r\n    \"dtNascimento\": \"01-01-1998\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/orlando/webapi/usuario",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"orlando",
+										"webapi",
+										"usuario"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "DELETE - Usuario",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/orlando/webapi/usuario?id=3",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"orlando",
+										"webapi",
+										"usuario"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "3"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Categoria",
+					"item": [
+						{
+							"name": "GETAll - Categoria",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/orlando/webapi/categoria",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"orlando",
+										"webapi",
+										"categoria"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GETByTipo - Categoria",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/orlando/webapi/categoria/tipo?tipo=%%",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"orlando",
+										"webapi",
+										"categoria",
+										"tipo"
+									],
+									"query": [
+										{
+											"key": "tipo",
+											"value": "%%"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GETById - Categoria",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/orlando/webapi/categoria/id?id=",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"orlando",
+										"webapi",
+										"categoria",
+										"id"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "POST - Categoria",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"tipo\": \"Filmes\",\r\n    \"descricao\":\"Descrição da categoria filmes!\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/orlando/webapi/categoria",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"orlando",
+										"webapi",
+										"categoria"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "PUT - Categoria",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 3,\r\n    \"tipo\": \"Jogos\",\r\n    \"descricao\":\"ATUALIZAÇÃO da categoria jogos!\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/orlando/webapi/categoria",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"orlando",
+										"webapi",
+										"categoria"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "DELETE - Categoria",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/orlando/webapi/categoria?id=",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"orlando",
+										"webapi",
+										"categoria"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Avaliação",
+					"item": [
+						{
+							"name": "GETAll - Avaliação",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/orlando/webapi/avaliacao",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"orlando",
+										"webapi",
+										"avaliacao"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetByID - Avaliação",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/orlando/webapi/avaliacao/id?id=",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"orlando",
+										"webapi",
+										"avaliacao",
+										"id"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "POST - Avaliação",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"usuario\": {\r\n        \"id\": 1\r\n    },\r\n    \"categoria\": {\r\n        \"id\": 1\r\n    },\r\n    \"titulo\": \"Duna\",\r\n    \"comentario\": \"Duna é um excelente filme!\",\r\n    \"nota\": 5,\r\n    \"duracao\": 200,\r\n    \"valor\": 70.99,\r\n    \"dataAtividade\": \"24-10-2021\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/orlando/webapi/avaliacao",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"orlando",
+										"webapi",
+										"avaliacao"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "PUT - Avaliação",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 3,\r\n    \"usuario\": {\r\n        \"id\": 1\r\n    },\r\n    \"categoria\": {\r\n        \"id\": 1\r\n    },\r\n    \"titulo\": \"Pokemon\",\r\n    \"comentario\": \"Pokemon é um excelente RPG\",\r\n    \"nota\": 5,\r\n    \"duracao\": 100,\r\n    \"valor\": 0,\r\n    \"dataAtividade\": \"24-10-2021\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/orlando/webapi/avaliacao",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"orlando",
+										"webapi",
+										"avaliacao"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "DELETE - Avaliação",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/orlando/webapi/avaliacao?id=",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"orlando",
+										"webapi",
+										"avaliacao"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Cliente",
+					"item": [
+						{
+							"name": "GETAll - Cliente",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/orlando/webapi/cliente",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"orlando",
+										"webapi",
+										"cliente"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GETByNome - Cliente",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/orlando/webapi/cliente/nome?nome=%%",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"orlando",
+										"webapi",
+										"cliente",
+										"nome"
+									],
+									"query": [
+										{
+											"key": "nome",
+											"value": "%%"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GETByID - Cliente",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/orlando/webapi/cliente/id?id=",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"orlando",
+										"webapi",
+										"cliente",
+										"id"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "POST - Cliente",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"nome\": \"Allison Alberto\",\r\n    \"usuario\": \"allison@email.com\",\r\n    \"senha\": \"senha123\",\r\n    \"cnpj\": \"11122233444-55\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/orlando/webapi/cliente",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"orlando",
+										"webapi",
+										"cliente"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "PUT - Cliente",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 3,\r\n    \"nome\": \"Orlando Neto\",\r\n    \"usuario\": \"orlando@email.com\",\r\n    \"senha\": \"123SENHA\",\r\n    \"cnpj\": \"666777888999-10\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/orlando/webapi/cliente",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"orlando",
+										"webapi",
+										"cliente"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "DELETE - Cliente",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/orlando/webapi/cliente?id=",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"orlando",
+										"webapi",
+										"cliente"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Venda",
+					"item": [
+						{
+							"name": "GETAll - Venda",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/orlando/webapi/venda",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"orlando",
+										"webapi",
+										"venda"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GETByID - Venda",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/orlando/webapi/venda/id?id=1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"orlando",
+										"webapi",
+										"venda",
+										"id"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "POST - Venda",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"cliente\": {\r\n        \"id\": 1\r\n    },\r\n    \"produto\": \"PRODUTO AAABBBCCC\",\r\n    \"preco\": 500,\r\n    \"dataVenda\": \"25-10-2021\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/orlando/webapi/venda",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"orlando",
+										"webapi",
+										"venda"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "PUT - Venda",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"cliente\": {\r\n        \"id\": 1\r\n    },\r\n    \"produto\": \"PRODUTO EEE FFF GGG\",\r\n    \"preco\": 1000,\r\n    \"dataVenda\": \"25-10-2021\",\r\n    \"id\": 3\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/orlando/webapi/venda",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"orlando",
+										"webapi",
+										"venda"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "DELETE - Venda",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/orlando/webapi/venda?id=",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"orlando",
+										"webapi",
+										"venda"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GETRelatorio - Venda",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/orlando/webapi/venda/relatorio?preco=600&datavenda=%10%",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"orlando",
+										"webapi",
+										"venda",
+										"relatorio"
+									],
+									"query": [
+										{
+											"key": "preco",
+											"value": "600"
+										},
+										{
+											"key": "datavenda",
+											"value": "%10%"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}

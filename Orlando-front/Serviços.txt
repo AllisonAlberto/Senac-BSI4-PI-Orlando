@@ -1,0 +1,10 @@
+Usuario
+
+Categoria
+
+Avaliação
+
+Cliente
+
+Venda
+

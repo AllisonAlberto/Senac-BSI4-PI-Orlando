@@ -1,7 +1,7 @@
 <div>
   <h2>Lista de Vendas</h2>
 
-  <ul>
+  <ul class = "novaVenda">
     <li (click)="novoVenda()">
         Nova Venda
     </li>
@@ -17,7 +17,7 @@
     <Button (click)="cancelar()">Cancelar</Button>
   </div>
 
-  <ul>
+  <ul class = "lista">
     <li *ngFor="let venda of venda">
     <span (click)="selecionarVenda(venda)">
         {{venda.cliente}}
@@ -25,7 +25,7 @@
         {{venda.preco}}
         {{venda.dtVenda}}
     </span>
-    <span (click)="excluir(venda)" classe="botao-excluir">Clique p/ Excluir</span>
+    <span (click)="excluir(venda)" class ="botao-excluir">Clique p/ Excluir</span>
     </li>
   </ul>
 

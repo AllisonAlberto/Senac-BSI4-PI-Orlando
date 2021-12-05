@@ -1,7 +1,7 @@
 <div>
     <h2>Lista de Clientes</h2>
 
-    <ul>
+    <ul class = "novoCliente">
         <li (click)="novoCliente()">
             Novo Clientes
         </li>
@@ -17,7 +17,7 @@
         <Button (click)="salvar()">Salvar</Button>
     </div>
 
-    <ul>
+    <ul class = "lista">
         <li *ngFor="let cliente of clientes">
         <span (click)="selecionarCliente(cliente)">
             {{cliente.id}}
@@ -26,7 +26,7 @@
             {{cliente.senha}}
             {{cliente.cnpj}}
         </span>
-        <span (click)="excluir(cliente)" classe="botao-excluir">Clique p/ Excluir</span>
+        <span (click)="excluir(cliente)" class ="botao-excluir">Clique p/ Excluir</span>
         </li>
     </ul>
 

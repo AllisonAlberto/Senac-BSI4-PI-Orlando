@@ -1,7 +1,7 @@
 <div>
     <h2>Lista de Categorias</h2>
 
-    <ul>
+    <ul class = novaCategoria>
         <li (click)="novoCategoria()">
             Nova Categoria
         </li>
@@ -15,7 +15,7 @@
         <Button (click)="salvar()">Salvar</Button>
     </div>
 
-    <ul>
+    <ul class = "lista">
         <li *ngFor="let categoria of categorias">
         <span (click)="selecionarCategoria(categoria)">
             {{categoria.id}}
@@ -23,7 +23,7 @@
             {{categoria.descricao}}
 
         </span>
-        <span (click)="excluir(categoria)" classe="botao-excluir">Clique p/ Excluir</span>
+        <span (click)="excluir(categoria)" class ="botao-excluir">Clique p/ Excluir</span>
         </li>
     </ul>
 

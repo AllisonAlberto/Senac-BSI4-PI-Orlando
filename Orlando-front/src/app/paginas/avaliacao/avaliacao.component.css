@@ -1,0 +1,78 @@
+a {
+    color: white;
+    text-decoration: none;
+}
+.novaAvaliacao{
+    display: flex;
+}
+
+.novaAvaliacao li{
+    list-style: none;
+    background-color: black;
+    margin: 5px;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 10px;
+    transition: background-color 1s;
+    cursor: pointer;
+}
+
+.novaAvaliacao li:hover{
+    background-color: rgb(59, 59, 59);
+}
+
+button{
+    list-style: none;
+    background-color: black;
+    margin: 5px;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 10px;
+    transition: background-color 1s;
+    cursor: pointer;
+    color: white;
+}
+
+button:hover{
+    background-color: rgb(59, 59, 59);
+}
+
+input{
+    display: flex;
+}
+
+.botao-excluir{
+    list-style: none;
+    display: inline-block;
+    background-color: black;
+    margin: 5px;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 10px;
+    transition: background-color 1s;
+    cursor: pointer;
+}
+
+.botao-excluir:hover{
+    background-color: rgb(255, 0, 0);
+}
+
+.lista{
+    border-style: double;
+    list-style: none;
+    background-color: grey;
+    margin: 5px;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 10px;
+    transition: background-color 1s;
+    cursor: pointer;
+}
+
+.lista:hover{
+    background-color: rgb(59, 59, 59);
+}

@@ -130,7 +130,7 @@ public class DaoVenda {
 		
 		try(PreparedStatement ps = DB.connect().prepareStatement(sql)) {
 			ps.setFloat(1, preco);
-			ps.setString(2, datavenda);
+			ps.setString(2, "%" + datavenda + "%");
 			ResultSet rs = ps.executeQuery();
 			
 			while(rs.next()) {

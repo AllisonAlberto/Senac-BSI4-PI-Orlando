@@ -44,7 +44,7 @@ public class ServiceVenda {
 	@Path("relatorio")
 	public List<Venda> relatorio(@QueryParam("preco") float preco, @QueryParam("datavenda") String datavenda) {
 		try {
-			DaoVenda.relatorio(preco, datavenda);
+			return DaoVenda.relatorio(preco, datavenda);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

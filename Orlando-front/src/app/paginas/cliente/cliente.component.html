@@ -1,0 +1,33 @@
+<div>
+    <h2>Lista de Clientes</h2>
+
+    <ul>
+        <li (click)="novoCliente()">
+            Novo Clientes
+        </li>
+    </ul>
+
+    <div *ngIf="clienteEdicao != undefined" class="formulario">
+        <h3>Inserir/Editar</h3>
+        <input placeholder="Nome" [(ngModel)]="clienteEdicao.nome"> <br>
+        <input placeholder="Usuario" [(ngModel)]="clienteEdicao.usuario"> <br>
+        <input placeholder="Senha" [(ngModel)]="clienteEdicao.senha"> <br>
+        <input placeholder="cnpj" [(ngModel)]="clienteEdicao.cnpj"> <br>
+        <Button (click)="cancelar()">Cancelar</Button>
+        <Button (click)="salvar()">Salvar</Button>
+    </div>
+
+    <ul>
+        <li *ngFor="let cliente of clientes">
+        <span (click)="selecionarCliente(cliente)">
+            {{cliente.id}}
+            {{cliente.nome}}
+            {{cliente.usuario}}
+            {{cliente.senha}}
+            {{cliente.cnpj}}
+        </span>
+        <span (click)="excluir(cliente)" classe="botao-excluir">Clique p/ Excluir</span>
+        </li>
+    </ul>
+
+</div>

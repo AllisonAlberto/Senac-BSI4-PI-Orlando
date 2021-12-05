@@ -5,7 +5,7 @@ input{
 }
 
 button{
-    background-color: blue;
+    background-color: aqua;
 }
 
 .botao-excluir {
@@ -18,4 +18,10 @@ button{
     height: 20px;
     border: 20px;
     text-align: center;
+}
+
+.formulario{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }

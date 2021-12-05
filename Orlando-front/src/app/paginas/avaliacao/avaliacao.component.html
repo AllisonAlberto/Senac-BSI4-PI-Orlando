@@ -1,0 +1,41 @@
+<div>
+  <h2>Lista de Avaliações</h2>
+
+  <ul>
+    <li (click)="novoAvaliacao()">
+        Novo Avaliação
+    </li>
+  </ul>
+
+  <div *ngIf="avaliacaoEdicao != undefined" class="formulario">
+    <h3>Inserir/Editar</h3>
+    <input placeholder="Usuario" [(ngModel)]="avaliacaoEdicao.usuario"> <br>
+    <input placeholder="Titulo" [(ngModel)]="avaliacaoEdicao.titulo"> <br>
+    <input placeholder="Data Atividade" [(ngModel)]="avaliacaoEdicao.dtAtividade"> <br>
+    <input placeholder="Categoria" [(ngModel)]="avaliacaoEdicao.categoria"> <br>
+    <input placeholder="Duracao" [(ngModel)]="avaliacaoEdicao.duracao"> <br>
+    <input placeholder="Valor" [(ngModel)]="avaliacaoEdicao.valor"> <br>
+    <input placeholder="Nota" [(ngModel)]="avaliacaoEdicao.nota"> <br>
+    <input placeholder="Comentario" [(ngModel)]="avaliacaoEdicao.comentario"> <br>
+    <Button (click)="salvar()">Salvar</Button>
+    <Button (click)="cancelar()">Cancelar</Button>
+
+  </div>
+
+  <ul>
+    <li *ngFor="let avaliacao of avaliacao">
+    <span (click)="selecionarAvaliacao(avaliacao)">
+        {{avaliacao.id}}
+        {{avaliacao.titulo}}
+        {{avaliacao.usuario}}
+        {{avaliacao.categoria}}
+        {{avaliacao.nota}}
+        {{avaliacao.duracao}}
+        {{avaliacao.valor}}
+        {{avaliacao.dtAtividade}}
+    </span>
+    <span (click)="excluir(avaliacao)" classe="botao-excluir">Clique p/ Excluir</span>
+    </li>
+  </ul>
+
+</div>

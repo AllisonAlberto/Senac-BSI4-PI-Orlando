@@ -1,0 +1,32 @@
+<div>
+  <h2>Lista de Vendas</h2>
+
+  <ul>
+    <li (click)="novoVenda()">
+        Nova Venda
+    </li>
+  </ul>
+
+  <div *ngIf="vendaEdicao != undefined" class="formulario">
+    <h3>Inserir/Editar</h3>
+    <input placeholder="Cliente" [(ngModel)]="vendaEdicao.cliente"> <br>
+    <input placeholder="Produto" [(ngModel)]="vendaEdicao.produto"> <br>
+    <input placeholder="Preço" [(ngModel)]="vendaEdicao.preco"> <br>
+    <input placeholder="Data Venda" [(ngModel)]="vendaEdicao.dtVenda"> <br>
+    <Button (click)="salvar()">Comprar</Button>
+    <Button (click)="cancelar()">Cancelar</Button>
+  </div>
+
+  <ul>
+    <li *ngFor="let venda of venda">
+    <span (click)="selecionarVenda(venda)">
+        {{venda.cliente}}
+        {{venda.produto}}
+        {{venda.preco}}
+        {{venda.dtVenda}}
+    </span>
+    <span (click)="excluir(venda)" classe="botao-excluir">Clique p/ Excluir</span>
+    </li>
+  </ul>
+
+</div>

@@ -7,6 +7,8 @@ import { UsuarioComponent } from './paginas/usuario/usuario.component';
 import { FormsModule } from '@angular/forms';
 import { ClienteComponent } from './paginas/cliente/cliente.component';
 import { CategoriaComponent } from './paginas/categoria/categoria.component';
+import { AvaliacaoComponent } from './paginas/avaliacao/avaliacao.component';
+import { VendaComponent } from './paginas/venda/venda.component';
 
 @NgModule({
   declarations: [
@@ -14,6 +16,8 @@ import { CategoriaComponent } from './paginas/categoria/categoria.component';
     UsuarioComponent,
     ClienteComponent,
     CategoriaComponent,
+    AvaliacaoComponent,
+    VendaComponent,
   ],
   imports: [
     BrowserModule,

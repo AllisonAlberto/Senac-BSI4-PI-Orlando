@@ -1,27 +1,40 @@
-input{
-    padding: 10px;
-    margin: 10px;
-    border-radius: 25px;
+a {
+    color: white;
+    text-decoration: none;
+}
+.novoUsuario{
+    display: flex
+}
+
+.novoUsuario li{
+    list-style: none;
+    background-color: black;
+    margin: 5px;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 10px;
+    transition: background-color 1s;
+    cursor: pointer;
+}
+
+.novoUsuario li:hover{
+    background-color: rgb(59, 59, 59);
 }
 
 button{
-    background-color: aqua;
-}
-
-.botao-excluir {
-    float: right;
-    background-color: red;
+    list-style: none;
+    background-color: black;
+    margin: 5px;
     padding: 5px;
-    margin-top: -5px;
-    margin-right: 10px;
-    width: 20px;
-    height: 20px;
-    border: 20px;
-    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 10px;
+    transition: background-color 1s;
+    cursor: pointer;    
+    color: white;
 }
 
-.formulario{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+button:hover{
+    background-color: rgb(59, 59, 59);
 }

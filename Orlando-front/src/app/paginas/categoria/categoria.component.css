@@ -1,0 +1,51 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background: grey;
+}
+
+html{
+    min-height: 100%;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+.formulario{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.ul{
+    list-style: none;
+    background-color: #606060;
+}
+
+.botao-excluir{
+    float: right;
+    background-color: red;
+    padding: 5px;
+    margin-top: -5px;
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+    border: 20px;
+    text-align: center;
+}
+
+button{
+    list-style: none;
+    background-color: black;
+    margin: 5px;
+    padding: 10px;
+    border-radius: 30 px;
+    transition: background-color 1s;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: rgb(66, 66, 66);
+
+}

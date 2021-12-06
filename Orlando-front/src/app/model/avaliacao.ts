@@ -3,12 +3,12 @@ import { Categoria } from 'src/app/model/categoria';
 export class Avaliacao {
   id?: number;
   titulo?: string;
-  usuario?: Usuario["id"];
-  categoria?: Categoria["id"];
+  usuario = new Usuario();
+  categoria = new Categoria();
   comentario?: string;
   nota?: number;
   duracao?: number;
   valor?: number;
-  dtAtividade?: string;
+  dataAtividade?: string;
 
 }

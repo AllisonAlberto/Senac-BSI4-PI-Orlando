@@ -9,6 +9,7 @@ import { ClienteComponent } from './paginas/cliente/cliente.component';
 import { CategoriaComponent } from './paginas/categoria/categoria.component';
 import { AvaliacaoComponent } from './paginas/avaliacao/avaliacao.component';
 import { VendaComponent } from './paginas/venda/venda.component';
+import { RelatorioComponent } from './paginas/relatorio/relatorio.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { VendaComponent } from './paginas/venda/venda.component';
     CategoriaComponent,
     AvaliacaoComponent,
     VendaComponent,
+    RelatorioComponent,
   ],
   imports: [
     BrowserModule,

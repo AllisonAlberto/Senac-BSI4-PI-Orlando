@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { Cliente } from 'src/app/model/cliente';
+import { Usuario } from 'src/app/model/usuario';
 import { Venda } from 'src/app/model/venda';
+import { ClienteService } from 'src/app/services/cliente.service';
+import { UsuarioService } from 'src/app/services/usuario.service';
 import { VendaService } from 'src/app/services/venda.service';
 
 @Component({
@@ -11,11 +15,13 @@ export class VendaComponent implements OnInit {
   venda = new Array<Venda>();
   vendaEdicao?: Venda = undefined;
   estaEditando = false;
+  clientes = new Array<Cliente>();
 
-  constructor(private vendaService: VendaService) { }
+  constructor(private vendaService: VendaService, private clienteService: ClienteService) { }
 
   ngOnInit(): void {
     this.listar();
+    this.listarClientes();
   }
 
   listar(): void{
@@ -64,6 +70,12 @@ export class VendaComponent implements OnInit {
         this.listar();
       });
     }
+  }
+
+  listarClientes(): void{
+    this.clienteService.listar().subscribe(clientes => {
+      this.clientes = clientes;
+    });
   }
 
 }

@@ -20,12 +20,11 @@
     <ul class = "lista">
         <li *ngFor="let cliente of clientes">
         <span (click)="selecionarCliente(cliente)">
-            {{cliente.id}}
-            {{cliente.nome}}
-            {{cliente.usuario}}
-            {{cliente.senha}}
-            {{cliente.cnpj}}
+            Nome: {{cliente.nome}},
+            Email: {{cliente.usuario}},
+            CNPJ: {{cliente.cnpj}},
         </span>
+        <br>
         <span (click)="excluir(cliente)" class ="botao-excluir">Clique p/ Excluir</span>
         </li>
     </ul>

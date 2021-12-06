@@ -18,9 +18,9 @@
     <ul class = "lista">
         <li *ngFor="let categoria of categorias">
         <span (click)="selecionarCategoria(categoria)">
-            {{categoria.id}}
-            {{categoria.tipo}}
-            {{categoria.descricao}}
+
+           Tipo: {{categoria.tipo}},
+           Descrição: {{categoria.descricao}}
 
         </span>
         <span (click)="excluir(categoria)" class ="botao-excluir">Clique p/ Excluir</span>

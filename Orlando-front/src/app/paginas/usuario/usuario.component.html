@@ -20,11 +20,9 @@
     <ul class = "lista">
         <li *ngFor="let usuario of usuarios">
         <span (click)="selecionarUsuario(usuario)">
-            {{usuario.id}}
-            {{usuario.nome}}
-            {{usuario.usuario}}
-            {{usuario.senha}}
-            {{usuario.dtNascimento}}
+            Nome: {{usuario.nome}},
+            Email: {{usuario.usuario}},
+
         </span>
         <span (click)="excluir(usuario)" class ="botao-excluir">Clique p/ Excluir</span>
         </li>

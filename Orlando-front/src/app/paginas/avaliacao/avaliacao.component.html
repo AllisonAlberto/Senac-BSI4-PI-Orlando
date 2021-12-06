@@ -30,19 +30,17 @@
 
   </div>
 
-  <ul>
+  <ul class = "lista">
     <li *ngFor="let avaliacao of avaliacao">
     <span (click)="selecionarAvaliacao(avaliacao)">
-        {{avaliacao.id}}
-        {{avaliacao.titulo}}
-        {{avaliacao.usuario.nome}}
-        {{avaliacao.categoria.tipo}}
-        {{avaliacao.nota}}
-        {{avaliacao.duracao}}
-        {{avaliacao.valor}}
-        {{avaliacao.dataAtividade}}
+       Usuario: {{avaliacao.usuario.nome}},  
+       Título: {{avaliacao.titulo}},
+        Categoria {{avaliacao.categoria.tipo}},
+        Nota {{avaliacao.nota}},
+        Valor (R$): {{avaliacao.valor}}
+
     </span>
-    <span (click)="excluir(avaliacao)" classe="botao-excluir">Clique p/ Excluir</span>
+    <span (click)="excluir(avaliacao)" class ="botao-excluir">Clique p/ Excluir</span>
     </li>
   </ul>
 

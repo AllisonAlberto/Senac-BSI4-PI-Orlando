@@ -9,10 +9,14 @@
 
   <div *ngIf="vendaEdicao != undefined" class="formulario">
     <h3>Inserir/Editar</h3>
-    <input placeholder="Cliente" [(ngModel)]="vendaEdicao.cliente"> <br>
+    <select [(ngModel)]="vendaEdicao.cliente.id">
+      <option *ngFor="let cliente of clientes" value= {{cliente.id}}>
+        {{cliente.nome}}
+      </option>
+   </select> <br>
     <input placeholder="Produto" [(ngModel)]="vendaEdicao.produto"> <br>
     <input placeholder="Preço" [(ngModel)]="vendaEdicao.preco"> <br>
-    <input placeholder="Data Venda" [(ngModel)]="vendaEdicao.dtVenda"> <br>
+    <input placeholder="Data Venda" [(ngModel)]="vendaEdicao.dataVenda"> <br>
     <Button (click)="salvar()">Comprar</Button>
     <Button (click)="cancelar()">Cancelar</Button>
   </div>
@@ -20,10 +24,10 @@
   <ul class = "lista">
     <li *ngFor="let venda of venda">
     <span (click)="selecionarVenda(venda)">
-        {{venda.cliente}}
+        {{venda.cliente.nome}}
         {{venda.produto}}
         {{venda.preco}}
-        {{venda.dtVenda}}
+        {{venda.dataVenda}}
     </span>
     <span (click)="excluir(venda)" class ="botao-excluir">Clique p/ Excluir</span>
     </li>

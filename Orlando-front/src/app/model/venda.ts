@@ -1,8 +1,8 @@
 import { Cliente } from 'src/app/model/cliente';
 export class Venda {
   id?: number;
-  cliente?: Cliente;
+  cliente = new Cliente();
   produto?: string;
   preco?: number;
-  dtVenda?: string;
+  dataVenda?: string;
 }
